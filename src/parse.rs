@@ -4,7 +4,7 @@ use regex::Regex;
 use std::mem;
 
 lazy_static! {
-    static ref DIRECTIVE_REGEX: Regex = Regex::new("([A-Z-]+):\\s?(.*)").unwrap();
+    static ref DIRECTIVE_REGEX: Regex = Regex::new("(RUN|CHECK|CHECK-NEXT|XFAIL):\\s*?(.*)").unwrap();
     static ref IDENTIFIER_REGEX: Regex = Regex::new("^[a-zA-Z_][a-zA-Z0-9_]*$").unwrap();
 }
 
