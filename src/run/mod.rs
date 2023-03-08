@@ -19,9 +19,9 @@ use crate::model::*;
 ///
 pub fn tests<F>(
     mut event_handler: impl EventHandler,
-    config_fn: F,
+    mut config_fn: F,
     ) -> Result<(), ()>
-    where F: Fn(&mut Config) {
+    where F: FnMut(&mut Config) {
     let mut config = Config::default();
     config_fn(&mut config);
 
