@@ -41,7 +41,7 @@ pub fn tests<F>(
 
     if test_paths.is_empty() {
         event_handler.note_warning("could not find any tests");
-        return Err(());
+        return Ok(());
     }
 
     let test_suite_details = TestSuiteDetails {
